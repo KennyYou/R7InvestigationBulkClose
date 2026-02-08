@@ -26,3 +26,7 @@ You can check if an investigation has an comment by selecting the checkbox and s
   
   <img width="835" height="505" alt="image" src="https://github.com/user-attachments/assets/c5a6a003-c472-4086-8208-ba2afdafcc6a" />
 
+  - The start date for investigatiosn is set to 2024 and beyond
+
+  
+
