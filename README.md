@@ -2,33 +2,25 @@
 
 # InsightIDR Investigation Updater
 
-**Bulk-update Rapid7 InsightIDR investigations from a desktop UI built with CustomTkinter.**
-
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-8A2BE2)
-![UI](https://img.shields.io/badge/UI-CustomTkinter-2ea44f)
-
+**Bulk-update Rapid7 InsightIDR investigations**
 </div>
+
+For Background.
+
+Rapid7 does not natively provide a way to apply individual comments while bulk-closing investigations. Their built-in bulk close feature closes on investigations that share the same name, which is not ideal for scenarios where alerts are essentially distinct, unrelated issues. Nor does it add a comment to why this was closed if you decide to bulk close one. This app provides an local GUI that interfaces with the Rapid7 API to view, update, and more importantly update multiple investigations without needing to manually close them out one by one.
+
+
+
+<img width="2394" height="1264" alt="Screenshot 2026-02-06 191629" src="https://github.com/user-attachments/assets/872b53ef-8929-48be-8591-8f5c9b6ff945" />
+
 
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
 - [Key Features](#key-features)
-- [Requirements](#requirements)
-- [Quick Start](#quick-start)
-- [Configuration](#configuration)
 - [Usage](#usage)
-- [Data & Privacy Notes](#data--privacy-notes)
 - [Troubleshooting](#troubleshooting)
-
----
-
-## Overview
-
-This tool helps SOC and IR teams quickly triage and update InsightIDR investigations in bulk.
-It supports status/disposition/assignee updates, comment posting, filtering, and a right-side activity panel for status, comments, and comment history.
 
 ---
 
@@ -39,7 +31,7 @@ It supports status/disposition/assignee updates, comment posting, filtering, and
   - disposition
   - assignee
   - optional comment
-- **Assignee management UI** (add/edit/remove team members).
+- **Assignee management UI** (add/edit/remove team members for assignment).
 - **Region and organization settings** with first-run setup dialog.
 - **API key source options**:
   - environment variable
@@ -48,54 +40,12 @@ It supports status/disposition/assignee updates, comment posting, filtering, and
   - post comments to investigations
   - view selected investigation comments
   - local reusable comment history
-- **Responsive UX** with background threads and progress dialogs.
-
----
-
-## Requirements
-
-- Python **3.10+**
-- Rapid7 InsightIDR API key
-- Network access to `*.api.insight.rapid7.com`
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Quick Start
-
-Run the app:
-
-```bash
-python insightidr_updater.py
-```
 
 On first launch, the app guides you through:
 
 1. Region + Organization settings
 2. Team member (assignee) setup
 3. API key source selection
-
----
-
-## Configuration
-
-The app stores settings in your user config directory:
-
-- **Windows:** `%APPDATA%/InsightIDRUpdater/config.json`
-- **macOS:** `~/Library/Application Support/InsightIDRUpdater/config.json`
-- **Linux:** `~/.config/InsightIDRUpdater/config.json`
-
-Stored settings include items such as:
-
-- API key source metadata (env var name or key file path)
-- region and optional org ID
-- assignees
-- comment history
 
 ---
 
@@ -110,16 +60,8 @@ Stored settings include items such as:
 ### Right panel tabs
 
 - **Status Log** – operation and error messages
-- **Comments** – view comments for selected investigation
+- **Comments** – view comments for selected investigation (You will need to select one ivnestigation then hit refresh)
 - **History** – reusable saved comments
-
----
-
-## Data & Privacy Notes
-
-- This tool can display and store operational data (e.g., assignee emails, org ID, and comment history) in local settings.
-- Protect workstation access and local config files appropriately.
-- Avoid sharing screenshots that may reveal sensitive investigation details.
 
 ---
 
@@ -141,6 +83,9 @@ Stored settings include items such as:
 - Ensure investigation RRN can be resolved.
 - Verify API key scope includes v1 comment access.
 
----
 
-If helpful, I can also add screenshots/GIFs and a concise architecture section to make this README even closer to high-end showcase-style repos.
+### Something else just open an issue
+
+- If something else is broken just open an issue and I can take a look.
+
+
