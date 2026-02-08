@@ -25,7 +25,9 @@ Rapid7 does not natively provide a way to apply individual comments while bulk-c
 ---
 
 ## Key Features
-
+- **Open Directly to investigation**:
+  - You will need to set your ORG ID
+  - An 'Open' button will appear next to each investigation box
 - **Bulk updates** for selected investigations:
   - status
   - disposition
@@ -84,8 +86,11 @@ On first launch, the app guides you through:
 - Verify API key scope includes v1 comment access.
 
 
-### Something else just open an issue
+### No option to open investigation
 
-- If something else is broken just open an issue and I can take a look.
+- Ensure you have your ORG ID set
+- Restart if you've set it correctly in the settings - ths should now show up
+
+
 
 
